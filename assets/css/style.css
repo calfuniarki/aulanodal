@@ -101,7 +101,7 @@ img { max-width: 100%; display: block; }
   gap: 14px;
   margin-top: 8px;
 }
-.hero-graphic svg { width: 100%; height: auto; }
+.hero-graphic img { width: 100%; max-width: 340px; height: auto; margin: 0 auto; }
 
 .btn {
   display: inline-block;
