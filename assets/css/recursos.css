@@ -1,0 +1,56 @@
+/* ---------- Page hero (genérico, reutilizable en recursos/comunidad/contacto) ---------- */
+.page-hero { padding: 56px 0 20px; text-align: center; }
+.page-hero-inner { max-width: 640px; margin: 0 auto; }
+.page-hero h1 { font-size: clamp(1.9rem, 4vw, 2.4rem); }
+
+/* ---------- Resource card ---------- */
+.resource-section { padding: 40px 0 80px; }
+.resource-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--navy-light);
+  border-radius: 14px;
+  padding: 40px 36px;
+  text-align: center;
+  border-top: 3px solid var(--teal);
+}
+.resource-tag {
+  display: inline-block;
+  background: rgba(13, 148, 136, 0.18);
+  color: var(--mint);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+.resource-card h2 { font-size: 1.5rem; }
+.resource-card > p { max-width: 46ch; margin: 0 auto 22px; }
+.resource-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  text-align: left;
+  max-width: 38ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.resource-features li {
+  padding: 7px 0 7px 24px;
+  position: relative;
+  color: var(--ink-soft);
+}
+.resource-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+/* ---------- Próximamente ---------- */
+.more-resources { padding: 0 0 96px; text-align: center; }
+.more-resources h2 { font-size: 1.3rem; margin-bottom: 10px; }
+.more-resources p { max-width: 48ch; margin: 0 auto; }
