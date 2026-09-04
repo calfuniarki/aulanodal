@@ -1,0 +1,44 @@
+/* ---------- Canales de comunidad ---------- */
+.community-channels { padding: 20px 0 80px; }
+.channels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.channel-card {
+  background: var(--navy-light);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.channel-node {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+.channel-node-cyan { background: var(--cyan); }
+.channel-node-teal { background: var(--teal); }
+.channel-card h2 { font-size: 1.25rem; }
+.channel-card p { margin-bottom: 20px; }
+.channel-card .btn { margin-top: auto; }
+
+/* ---------- LOF ---------- */
+.lof-section { padding: 0 0 96px; text-align: center; }
+.lof-inner { max-width: 620px; margin: 0 auto; }
+.lof-section h2 { font-size: 1.3rem; margin-bottom: 12px; }
+.lof-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--mint);
+  font-size: 0.95rem;
+}
+.lof-link:hover { text-decoration: underline; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .channels-grid { grid-template-columns: 1fr; }
+}
