@@ -1,0 +1,40 @@
+/* ---------- Canales de contacto ---------- */
+.contact-channels { padding: 20px 0 60px; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.contact-card {
+  background: var(--navy-light);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: block;
+  border: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+.contact-card:hover { border-color: var(--teal); }
+.contact-icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(13, 148, 136, 0.18);
+  color: var(--mint);
+  margin-bottom: 16px;
+}
+.contact-icon svg { width: 20px; height: 20px; }
+.contact-card h2 { font-size: 1.15rem; margin-bottom: 4px; }
+.contact-card p { margin: 0; }
+
+/* ---------- Redes ---------- */
+.social-line { padding: 0 0 96px; text-align: center; }
+.social-line a { color: var(--mint); }
+.social-line a:hover { text-decoration: underline; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
