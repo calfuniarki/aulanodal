@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (href.includes('subscribepage.io')) {
       window.dataLayer.push({ event: 'cuadernillo_click' });
+    } else if (href.toLowerCase().endsWith('.pdf')) {
+      // Descarga de un recurso: el nombre del archivo identifica cuál.
+      const archivo = href.split('/').pop().replace(/\.pdf$/i, '');
+      window.dataLayer.push({ event: 'recurso_descarga', recurso: archivo });
     } else if (href.includes('pay.hotmart.com')) {
       const i = hotmartLinks.indexOf(link);
       window.dataLayer.push({
