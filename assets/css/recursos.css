@@ -3,54 +3,126 @@
 .page-hero-inner { max-width: 640px; margin: 0 auto; }
 .page-hero h1 { font-size: clamp(1.9rem, 4vw, 2.4rem); }
 
-/* ---------- Resource card ---------- */
-.resource-section { padding: 40px 0 80px; }
-.resource-card {
-  max-width: 620px;
-  margin: 0 auto;
-  background: var(--navy-light);
-  border-radius: 14px;
-  padding: 40px 36px;
-  text-align: center;
-  border-top: 3px solid var(--teal);
+/* ---------- Grilla de recursos ---------- */
+.resource-section { padding: 32px 0 16px; }
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
+.resource-item {
+  background: var(--navy-light);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid transparent;
+}
+.resource-item--orange { border-top-color: var(--orange); }
+.resource-item--teal   { border-top-color: var(--teal); }
+.resource-item--cyan   { border-top-color: var(--cyan); }
+
+.resource-node {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-bottom: 14px;
+}
+.resource-item--orange .resource-node { background: var(--orange); }
+.resource-item--teal   .resource-node { background: var(--teal); }
+.resource-item--cyan   .resource-node { background: var(--cyan); }
+
 .resource-tag {
   display: inline-block;
+  align-self: flex-start;
   background: rgba(13, 148, 136, 0.18);
   color: var(--mint);
-  padding: 5px 14px;
+  padding: 4px 12px;
   border-radius: 20px;
-  font-size: 0.85rem;
-  margin-bottom: 16px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
-.resource-card h2 { font-size: 1.5rem; }
-.resource-card > p { max-width: 46ch; margin: 0 auto 22px; }
+.resource-item h2 { font-size: 1.25rem; }
+
 .resource-features {
   list-style: none;
   padding: 0;
-  margin: 0 0 28px;
-  text-align: left;
-  max-width: 38ch;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 0 20px;
 }
 .resource-features li {
-  padding: 7px 0 7px 24px;
+  padding: 6px 0 6px 20px;
   position: relative;
   color: var(--ink-soft);
+  font-size: 0.94rem;
 }
 .resource-features li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 15px;
-  width: 8px;
-  height: 8px;
+  top: 14px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--orange);
 }
+.resource-meta {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 0.85rem;
+  color: rgba(201, 214, 227, 0.65);
+}
 
-/* ---------- Próximamente ---------- */
+/* ---------- Banda de suscripción ---------- */
+.resource-cta { padding: 48px 0 72px; }
+.resource-cta-inner {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--navy-light);
+  border-radius: 14px;
+  padding: 44px 36px;
+  border-top: 3px solid var(--mint);
+}
+.resource-cta h2 { font-size: 1.5rem; }
+.resource-cta > .wrap > p { max-width: 46ch; }
+.resource-cta-inner > p { max-width: 46ch; margin: 0 auto 24px; }
+.btn-large { padding: 15px 32px; font-size: 1.02rem; }
+.resource-cta-note {
+  margin: 20px 0 0;
+  font-size: 0.9rem;
+  color: rgba(201, 214, 227, 0.7);
+}
+.resource-cta-note a { color: var(--mint); text-decoration: underline; }
+
+/* ---------- Página de descargas ---------- */
+.descargas { padding: 24px 0 56px; }
+.descarga {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: var(--navy-light);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 18px;
+  border-left: 3px solid var(--teal);
+}
+.descarga--correo { border-left-color: var(--orange); }
+.descarga-texto { flex: 1; min-width: 0; }
+.descarga h2 { font-size: 1.2rem; margin-bottom: 0.35em; }
+.descarga p { margin: 0; max-width: 62ch; font-size: 0.95rem; }
+.descarga .btn { flex-shrink: 0; }
+
+/* ---------- Cierre ---------- */
 .more-resources { padding: 0 0 96px; text-align: center; }
 .more-resources h2 { font-size: 1.3rem; margin-bottom: 10px; }
-.more-resources p { max-width: 48ch; margin: 0 auto; }
+.more-resources p { max-width: 54ch; margin: 0 auto; }
+.more-resources a { color: var(--mint); text-decoration: underline; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .resource-grid { grid-template-columns: 1fr; }
+  .descarga { flex-direction: column; align-items: flex-start; gap: 20px; }
+}
